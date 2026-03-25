@@ -44,3 +44,13 @@ function calculate() {
         display.value = "Error";
     }
 }
+
+function eraseLast() {
+    let current = display.value;
+
+    if (current === "Error" || current === "") {
+        return;
+    } else {
+        display.value = current.slice(0, -1);
+    }
+}
