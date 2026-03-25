@@ -23,3 +23,24 @@ function appendDecimal() {
 function clearDisplay() {
     display.value = "";
 }
+
+function calculate() {
+    try {
+        let answer = display.value;
+
+        if (/[\+\-\*\/\.]$/.test(answer)) {
+            answer = answer.slice(0, -1);
+        }
+
+        if (!/^[0-9+\-*/.]+$/.test(answer)) {
+            display.value = "Error";
+            return;
+        }
+
+        let result = new Function('return ' + answer)();
+
+        display.value = Number.isFinite(result) ? result : "Error";
+    } catch (error) {
+        display.value = "Error";
+    }
+}
