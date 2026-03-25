@@ -19,3 +19,7 @@ function appendDecimal() {
         display.value += '.';
     }
 }
+
+function clearDisplay() {
+    display.value = "";
+}
