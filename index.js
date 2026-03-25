@@ -10,3 +10,12 @@ function appendToDisplay(value) {
     }
     display.value += value;
 }
+
+function appendDecimal() {
+    let current = display.value;
+    let lastNumber = current.split(/[\+\-\*\/]/).pop();
+
+    if (!lastNumber.includes('.')) {
+        display.value += '.';
+    }
+}
