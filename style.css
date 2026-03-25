@@ -31,3 +31,28 @@ body {
         );
     font-family: 'Rajdhani', sans-serif;
 }
+
+#calculator {
+    background-color: hsl(0, 0%, 10%);
+    border-radius: 24px;
+    width: 380px;
+    overflow: hidden;
+    box-shadow:
+        0 0 0 1px hsla(0,0%,100%,0.07),
+        0 32px 64px hsla(0,0%,0%,0.6),
+        0 0 80px hsla(0,0%,0%,0.4);
+    position: relative;
+}
+
+
+#calculator::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        hsl(0,100%,40%),
+        hsl(39,100%,40%),
+        hsl(120,100%,25%)
+    );
+}
